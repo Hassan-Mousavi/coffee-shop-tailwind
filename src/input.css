@@ -5,8 +5,16 @@
   --color-brown-300: #dbc1ac;
   --color-brown-600: #967259;
   --color-brown-900: #634832;
-  --shadow-custom: 0 1px 10px rgba(0, 0, 0, 0.05);
+  --shadow-normal: 0 1px 10px rgba(0, 0, 0, 0.05);
   --border-4xl: 2rem;
-  --yekan: "B Yekan_YasDL.com.ttf";
-  --font-nazanin: "Far.Nazanin";
+  --font-dana-bold: "Dana-Bold";
+  --font-dana-regular: "Dana-Regular";
 }
+body {
+  background-image: url("../images/headerBgDesktop.png");
+  background-repeat: no-repeat;
+}
+@custom-variant dark (&:where(.dark,.dark *));
+
+@custom-variant child (& > *);
+@custom-variant child-hover (& > *:hover);
