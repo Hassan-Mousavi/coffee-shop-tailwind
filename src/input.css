@@ -11,7 +11,7 @@
   --font-dana-regular: "Dana-Regular";
 }
 body {
-  background-image: url("../images/headerBgDesktop.png");
+  background-image: url("../images/headerBgDesktop.webp");
   background-repeat: no-repeat;
 }
 @custom-variant dark (&:where(.dark,.dark *));
