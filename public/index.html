@@ -433,14 +433,14 @@
       class="flex md:hidden items-center justify-between bg-white dark:bg-zinc-700 px-4 h-16"
     >
       <!-- bars icon -->
-      <div>
+      <div class="bars-icon">
         <svg class="w-6 h-6 text-zinc-700 dark:text-white">
           <use href="#bars-3"></use>
         </svg>
       </div>
       <!-- mobile menu -->
       <div
-        class="fixed top-0 bottom-0 right-0 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20"
+        class="nav fixed top-0 bottom-0 -right-64 w-64 min-h-screen pt-3 px-4 bg-white dark:bg-zinc-700 z-20 transition-all overflow-y-auto"
       >
         <!-- nav-mobile-header -->
         <div
@@ -455,9 +455,11 @@
               <use href="#logo-type"></use>
             </svg>
           </div>
-          <svg class="w-5 h-5 text-zinc-600 dark:text-white">
-            <use href="#x-mark"></use>
-          </svg>
+          <div class="x-mark">
+            <svg class="w-5 h-5 text-zinc-600 dark:text-white">
+              <use href="#x-mark"></use>
+            </svg>
+          </div>
         </div>
         <!-- nav-mobile-body -->
         <div
@@ -471,19 +473,31 @@
           </a>
         </div>
         <ul class="text-zinc-600 dark:text-white child:pr-2.5 space-y-6">
-          <li class="flex items-center justify-between">
-            <a href="#" class="flex items-center gap-x-2">
-              <svg class="w-6 h-6">
-                <use href="#shopping-card"></use>
-              </svg>
-              فروشگاه
-            </a>
-            <span>
-              <svg class="w-4 h-4">
-                <use href="#chevron-down"></use>
-              </svg>
-            </span>
+          <li>
+            <div class="flex items-center justify-between">
+              <a href="#" class="flex items-center gap-x-2">
+                <svg class="w-6 h-6">
+                  <use href="#shopping-card"></use>
+                </svg>
+                فروشگاه
+              </a>
+              <span class="submenu-btn">
+                <svg class="w-4 h-4">
+                  <use href="#chevron-down"></use>
+                </svg>
+              </span>
+            </div>
+            <!-- sub menu mobile -->
+            <div class="sub-menu">
+              <a href="#">قهوه ویژه</a>
+              <a href="#">ویژه در سطح جهانی</a>
+              <a href="#">قهوه درجه یک</a>
+              <a href="#">ترکیبات تجاری</a>
+              <a href="#">کپسول قهوه</a>
+              <a href="#">قهوه زینو برزیلی</a>
+            </div>
           </li>
+
           <li>
             <a href="#" class="flex items-center gap-x-2">
               <svg class="w-6 h-6">
@@ -520,7 +534,7 @@
 
         <!-- nav-mobile-footer -->
         <div
-          class="flex flex-col items-start gap-6 text-orange-300 pt-8 pr-2.5 mt-8 border-t border-t-gray-100 dark:border-t-white/10"
+          class="flex flex-col items-start gap-6 text-orange-300 py-8 pr-2.5 mt-8 border-t border-t-gray-100 dark:border-t-white/10"
         >
           <a href="#" class="inline-flex items-center gap-x-2">
             <svg class="w-5 h-5 text-orange-300">
@@ -567,9 +581,7 @@
         </svg>
       </div>
     </div>
-    <div
-      class="overlay md:hidden fixed inset-0 w-full h-full bg-black/40 z-10"
-    ></div>
+    <div class="overlay"></div>
     <script src="./scripts/app.js"></script>
   </body>
 </html>
