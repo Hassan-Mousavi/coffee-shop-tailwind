@@ -575,10 +575,92 @@
         </svg>
       </div>
       <!-- card icon -->
-      <div>
+      <div class="card-icon">
         <svg class="w-6 h-6 text-zinc-700 dark:text-white">
           <use href="#shopping-card"></use>
         </svg>
+      </div>
+      <!-- card-mobile -->
+      <div
+        class="fixed top-0 bottom-0 -left-64 flex flex-col w-64 min-h-screen pt-5 px-4 bg-white dark:bg-zinc-700 z-20 transition-all overflow-y-auto"
+      >
+        <!-- card-mobile-header -->
+        <div
+          class="flex items-center justify-between pb-5 mb-5 border-b border-b-gray-300 dark:border-b-white/10"
+        >
+          <div class="card-close-btn">
+            <svg class="w-5 h-5 text-zinc-600 dark:text-white">
+              <use href="#x-mark"></use>
+            </svg>
+          </div>
+          <span class="text-zinc-700 dark:text-white">سبد خرید</span>
+        </div>
+
+        <!-- card-mobile-body -->
+        <div class="child:pb-5 child:mb-5">
+          <div
+            class="flex gap-x-1 border-b border-b-gray-100 dark:border-b-white/10"
+          >
+            <img
+              src="./images/products/p1.png"
+              class="w-[90px] h-[90px]"
+              alt="product image"
+            />
+            <div class="flex flex-col justify-between gap-y-1.5">
+              <h4 class="text-zinc-700 dark:text-white text-sm line-clamp-2">
+                قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+              </h4>
+              <div>
+                <span class="text-teal-600 dark:text-emerald-500 text-xs"
+                  >14.500 تومان تخفیف</span
+                >
+                <div class="text-zinc-700 dark:text-white">
+                  175,000
+                  <span class="text-xs">تومان</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex gap-x-1 border-b border-b-gray-100 dark:border-b-white/10"
+          >
+            <img
+              src="./images/products/p2.png"
+              class="w-[90px] h-[90px]"
+              alt="product image"
+            />
+            <div class="flex flex-col justify-between gap-y-1.5">
+              <h4 class="text-zinc-700 dark:text-white text-sm line-clamp-2">
+                قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+              </h4>
+              <div>
+                <span class="text-teal-600 dark:text-emerald-500 text-xs"
+                  >14.500 تومان تخفیف</span
+                >
+                <div class="text-zinc-700 dark:text-white">
+                  175,000
+                  <span class="text-xs">تومان</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- card-mobile-footer -->
+        <div class="flex items-end justify-between gap-x-4 mt-auto mb-8">
+          <a
+            href="#"
+            class="flex items-center justify-center w-28 h-11 text-white bg-teal-600 dark:bg-emerald-500 rounded-xl"
+            >ثبت سفارش</a
+          >
+          <div>
+            <span class="text-gray-300 text-xs">مبلغ قابل پرداخت</span>
+            <div class="text-zinc-700 dark:text-white">
+              350,000
+              <span class="text-xs">تومان</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="overlay"></div>

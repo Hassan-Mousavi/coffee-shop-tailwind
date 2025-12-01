@@ -23,7 +23,6 @@ submenuBtn.addEventListener("click", function (e) {
   e.currentTarget.parentElement.classList.toggle("text-orange-300");
   subMenu.classList.toggle("submenu--open");
 });
-
 // bars icon
 barsOpenIcon.addEventListener("click", function () {
   nav.classList.remove("-right-64");
@@ -31,16 +30,12 @@ barsOpenIcon.addEventListener("click", function () {
   overlay.classList.add("overlay--visible");
 });
 
+function closeNav() {
+  nav.classList.remove("right-0");
+  nav.classList.add("-right-64");
+  overlay.classList.remove("overlay--visible");
+}
 // bars close btn
-barsCloseIcon.addEventListener("click", function () {
-  nav.classList.remove("right-0");
-  nav.classList.add("-right-64");
-  overlay.classList.remove("overlay--visible");
-});
-
+barsCloseIcon.addEventListener("click", closeNav);
 // overlay close menu bars mobile
-overlay.addEventListener("click",function(){
-  nav.classList.remove("right-0");
-  nav.classList.add("-right-64");
-  overlay.classList.remove("overlay--visible");
-})
+overlay.addEventListener("click", closeNav);
