@@ -10,10 +10,11 @@
   --font-dana-bold: "Dana-Bold";
   --font-dana-regular: "Dana-Regular";
 }
-body {
+
+/* body {
   background-image: url("../images/headerBgDesktop.webp");
   background-repeat: no-repeat;
-}
+} */
 @custom-variant dark (&:where(.dark,.dark *));
 
 @custom-variant child (& > *);
