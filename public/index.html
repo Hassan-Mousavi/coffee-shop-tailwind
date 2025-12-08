@@ -15,7 +15,9 @@
       );
     </script>
   </head>
-  <body class="font-(--font-dana-regular) bg-gray-100 dark:bg-zinc-800">
+  <body
+    class="font-(--font-dana-regular) bg-gray-100 dark:bg-zinc-800 h-[2000px]"
+  >
     <!-- All app icons -->
     <svg class="hidden">
       <symbol
@@ -261,10 +263,19 @@
           d="M443.5 162.6l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L224 351 28.5 155.5c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.7 4.8-12.3.1-17z"
         ></path>
       </symbol>
+      <symbol
+        id="curve"
+        width="100"
+        height="22"
+        viewBox="0 0 100 22"
+        fill="currentColor"
+      >
+        <path d="M50 0C69 0 81 22 100 22L0 22C18.75 22 31 0 50 0Z" />
+      </symbol>
     </svg>
     <!-- header section -->
     <header
-      class="fixed top-9 right-0 left-0 hidden md:flex items-center w-[98%] lg:w-[90%] h-24 px-5 lg:px-9 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]"
+      class="fixed top-9 right-0 left-0 z-50 hidden md:flex items-center w-[98%] lg:w-[90%] h-24 px-5 lg:px-9 py-5 mx-auto bg-black/50 rounded-3xl backdrop-blur-[6px]"
     >
       <div class="flex items-center justify-between w-full">
         <!-- logo & menu -->
@@ -666,15 +677,17 @@
     </div>
     <!-- main section -->
     <main>
-      <section class="home">
+      <section
+        class="h-[200px] relative xs:h-auto xs:aspect-[2/1] md:aspect-auto bg-[url('../images/headerBgMobile.webp')] bg-no-repeat bg-cover md:bg-[url('../images/headerBgDesktop.webp')] md:bg-[center_top]"
+      >
         <div
-          class="container px-4 md:px-2.5 md:min-h-screen flex justify-end items-center"
+          class="container relative overflow-y-hidden h-full md:min-h-screen flex justify-end items-center mx-auto"
         >
           <div class="text-white">
-            <h2 class="font-bold text-2xl md:text-6xl mb-0.5 md:mb-2">
+            <h2 class="font-bold text-2xl md:text-6xl/[62px] mb-0.5 md:mb-2">
               قهوه عربیکا تانزانیا
             </h2>
-            <span class="text-xl md:text-5xl">یک فنجان بالانس!</span>
+            <span class="text-xl md:text-5xl/[64px]">یک فنجان بالانس!</span>
             <span
               class="block w-[100px] h-px md:h-0.5 bg-orange-300 my-3 md:my-8"
             ></span>
@@ -683,6 +696,27 @@
               نواحی مختلف کمربند قهوه کشت میشود.
             </p>
           </div>
+          <!-- circles -->
+          <div class="circle circle--main circle--lg">
+            <div class="circle circle--md">
+              <div class="circle circle--sm"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Curve -->
+        <svg
+          class="absolute bottom-0 right-0 left-0 mx-auto hidden md:inline-block text-gray-100 dark:text-zinc-800 w-[100px] h-[22px]"
+        >
+          <use href="#curve"></use>
+        </svg>
+
+        <!-- Arrow circle -->
+        <div
+          class="absolute bottom-0 right-0 left-0 mx-auto translate-y-2/4 hidden md:flex items-center justify-center w-[30px] h-[30px] rounded-full border-2 border-orange-300"
+        >
+          <svg class="w-5 h-5 text-zinc-700 dark:text-white">
+            <use href="#chevron-down"></use>
+          </svg>
         </div>
       </section>
     </main>
